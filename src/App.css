@@ -1,0 +1,24 @@
+/* body {
+  background: url('http://farm3.staticflickr.com/2832/12303719364_c25cecdc28_b.jpg') fixed;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+
+} */
+*{
+  color: #fff;
+}
+body {
+  height: 100%;
+}
+.bg {
+  background: url("Images/pexels-pok-rie-171428.jpg") no-repeat; width: 100% ; height: 100vh; 
+  background-size: cover;
+}
+.form-container 
+{
+  border: 0px solid #fff; padding: 50px 60px; margin-top: 20vh;
+  box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+  -moz-box-shadow :  -1px 4px 26px 11px rgba(0,0,0,0.75);
+}
