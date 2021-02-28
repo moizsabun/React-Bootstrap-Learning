@@ -1,4 +1,4 @@
-const url = "http://mmr-dev.ke.com.pk:7001/api";
+const url = "http://localhost:52293/api";
 
 export const VerfiyLogin = async (getusername, getpassword) => {
 

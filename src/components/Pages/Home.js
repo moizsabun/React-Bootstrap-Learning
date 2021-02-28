@@ -1,5 +1,5 @@
 import React, {useState}from 'react'
-import {  Image, Form , Button} from 'react-bootstrap';
+import {  Image, Form , Button, Alert} from 'react-bootstrap';
 import { VerfiyLogin } from "../../Service/ApiService";
 function Copyright() {
   return (
@@ -72,8 +72,8 @@ export default function Home() {
             <h1> LDC PORTAL LOGIN</h1>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
-    <Form.Control type="text" placeholder="Enter email" />
-    <Form.Text className="text-muted" onChange={(e) => { setuserName(e.target.value) }}>
+    <Form.Control type="text" placeholder="Enter email" onChange={(e) => { setuserName(e.target.value) }} />
+    <Form.Text className="text-muted" >
       We'll never share your email with anyone else.
     </Form.Text>
   </Form.Group>
@@ -85,7 +85,7 @@ export default function Home() {
   <Form.Group controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
-  <Button  type="submit" className="btn btn-success btn-block"> 
+  <Button  type="submit" className="btn btn-success btn-block"  disabled={state.isLoading === 'loading'}> 
     Submit
   </Button>
 </Form>
@@ -98,6 +98,19 @@ export default function Home() {
         </div>
        {/**  <Image src="https://assets.digitalocean.com/labs/images/community_bg.png" />
         <h1>Hello Wolrd</h1>*/}
+       
+
+        <div style={{marginTop : "10px"}}>
+        <Alert variant="danger" onClose={() => setState({isOpen : false}) } dismissible  show={state.isOpen} >
+          <Alert.Heading>Some thing went Wrong!!</Alert.Heading>
+          <p>
+           Error Occured While Login! Please contact Administrator
+          </p>
+        </Alert>
+        </div>
+          
+        
+        
      <div >
      <Copyright></Copyright>
      </div>
