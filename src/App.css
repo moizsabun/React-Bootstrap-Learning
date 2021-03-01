@@ -12,8 +12,11 @@ body {
   height: 100%;
 }
 .bg {
-  background: url("Images/pexels-pok-rie-171428.jpg") no-repeat; width: 100% ; height: 100vh; 
+  background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) ,
+  url("Images/pexels-pok-rie-171428.jpg") no-repeat;height: 100vh; 
+  
   background-size: cover;
+  background-position: 100% 100%;
 }
 .form-container 
 {

@@ -1,14 +1,22 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
-import Header from "./components/Header";
-import Home from './components/Pages/Home';
+import AppContext from "./AppContext/AppContext";
+import Home from './components/Pages/Login';
 
 function App() {
+  let isAuthState = useState(false);
   return (
+    <>
     <div className="App">
+ <AppContext.Provider value={isAuthState}>
+ <Home></Home>
 
-   <Home></Home>
+</AppContext.Provider>
+
+ 
     </div>
+  
+    </>
   );
 }
 
