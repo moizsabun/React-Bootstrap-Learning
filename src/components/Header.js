@@ -32,6 +32,13 @@ export default function header() {
       </LinkContainer>
       </NavDropdown>
     </Nav>
+    <Nav className="justify-content-end">
+    <Nav.Item>
+      <Nav.Link>
+        Logout
+      </Nav.Link>
+    </Nav.Item>
+    </Nav>
     {/* <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
       <Button variant="outline-success">Search</Button>

@@ -70,7 +70,7 @@ export default function Login() {
   return (
     <Router>
     <Route component={Home} exact path="/"></Route>
-
+    <Route component={Home} path="*"></Route>
     </Router>
 
     
