@@ -1,12 +1,11 @@
 import React from 'react'
 import {  Nav,Navbar,NavDropdown,Form , FormControl, Button} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap'
-import Masterdata from './Pages/Masterdata';
-import MasterdataArchive from './Pages/MasterdataArchive';
+
 export default function header() {
     return (
         <Navbar collapseOnSelect bg="dark" variant="dark"  expand="lg"  >
-  <Navbar.Brand href="#home">LDC Shutdown</Navbar.Brand>
+  <Navbar.Brand href="#home">LDC Portal</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
@@ -22,13 +21,13 @@ export default function header() {
       </NavDropdown>
       <Nav.Link href="#link"></Nav.Link>
      
-      <NavDropdown title="Shutdown" id="basic-nav-dropdown">
-      <LinkContainer to="/Shutdown">
-      <NavDropdown.Item >Add Shutdown</NavDropdown.Item>
+      <NavDropdown title="Load Shedding" id="basic-nav-dropdown">
+      <LinkContainer to="/LoadShedding">
+      <NavDropdown.Item >Add Load Shedding</NavDropdown.Item>
       </LinkContainer>
       <NavDropdown.Divider />
-      <LinkContainer to="/ShutdownArchive">
-      <NavDropdown.Item>Shutdown Archive</NavDropdown.Item>
+      <LinkContainer to="/LoadSheddingArchive">
+      <NavDropdown.Item>Load Shedding Archive</NavDropdown.Item>
       </LinkContainer>
       </NavDropdown>
     </Nav>

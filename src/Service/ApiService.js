@@ -32,3 +32,59 @@ export const VerfiyLogin = async (getusername, getpassword) => {
     }
 
 }
+
+export const getAllMasterData =async() => {
+   
+    console.log("Getting Token from Local Storage");
+    console.log(localStorage.getItem("Token"));
+    let token =localStorage.getItem("Token"); 
+    
+  
+
+
+    let GetData = await fetch(`${url}/MasterData/getAllMasterData`, {
+        method: "GET",
+      
+        
+        
+        headers: {
+            // 'Authorization' :`Bearer ${token}`,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        mode: 'cors',
+    })
+    let getData = await GetData.json();
+
+    console.log(getData);
+    return getData;
+  ;
+}
+
+export const getAllLSData =async() => {
+
+    console.log("Getting Token from Local Storage");
+    console.log(localStorage.getItem("Token"));
+    let token =localStorage.getItem("Token"); 
+    
+  
+
+
+    let GetData = await fetch(`${url}/LoadShediing/GetLoadSheddings`, {
+        method: "GET",
+      
+        
+        
+        headers: {
+            // 'Authorization' :`Bearer ${token}`,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        mode: 'cors',
+    })
+    let getData = await GetData.json();
+
+    console.log(getData);
+    return getData;
+  ;
+}

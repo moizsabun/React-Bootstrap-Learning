@@ -4,18 +4,8 @@ import { VerfiyLogin } from "../../Service/ApiService";
 import isAuthContext from "../../AppContext/AppContext";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "../Pages/Home";
-function Copyright() {
-  return (
-<p style={{ paddingTop: "10px" , textAlign:"center" }}>
-      {'Copyright © '}
-      
-        LDC SHUTDOWN ATOMATION
-      {'  '}
-      {new Date().getFullYear()}
-      {'.'}
-      </p>
-  );
-}
+import Footer from '../Footer';
+
 
 export default function Login() {
   let isAuth = useContext(isAuthContext);
@@ -130,7 +120,7 @@ export default function Login() {
         
         
      <div >
-     <Copyright></Copyright>
+     <Footer></Footer>
      </div>
         </div>
         
